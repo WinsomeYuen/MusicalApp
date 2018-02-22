@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:drawSelectorOnTop="true"
+    tools:context="com.example.winsome.musicalapp.MusiclistActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:maxHeight="150dp"
+        android:maxWidth="150dp"
+        android:layout_marginTop="@dimen/gap"
+        android:layout_marginBottom="@dimen/gap"
+        android:scaleType="centerInside"
+        android:src="@drawable/musiccover1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titlescreen1"
+        android:textAlignment="center"
+        android:textSize="@dimen/sizeText1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titlescreen2"
+        android:textAlignment="center"
+        android:textSize="@dimen/sizeText2" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_marginTop="@dimen/gap"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

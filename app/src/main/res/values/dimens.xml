@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gap">5dp</dimen>
+    <dimen name="gapMargin">30dp</dimen>
+    <dimen name="sizeText1">20dp</dimen>
+    <dimen name="sizeText2">13dp</dimen>
+</resources>

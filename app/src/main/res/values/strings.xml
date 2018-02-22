@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MusicalApp</string>
+    <string name="title0">More of what you like</string>
+    <string name="subtitle0">Suggestions based on what you have liked and played</string>
+    <string name="title1">Artists you should know</string>
+    <string name="subtitle1">Top tracks from artists</string>
+    <string name="titlescreen1">Top Tracks</string>
+    <string name="titlescreen2">List of tracks below</string>
+</resources>
