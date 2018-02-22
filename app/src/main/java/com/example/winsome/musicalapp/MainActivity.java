@@ -15,12 +15,16 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
     private MyRecyclerViewAdapter adapter;
     private LinearLayoutManager horizontalLayoutManager;
     private ArrayList<Integer> cover = new ArrayList<>();
+    private ArrayList<Integer> artist = new ArrayList<>();
     private ArrayList<String> titles = new ArrayList<>();
     private ArrayList<String> subtitles = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_main);
 
         // data to populate the RecyclerView with
@@ -39,6 +43,11 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         subtitles.add("Blackbear");
         subtitles.add("Troye Sivan");
 
+        artist.add(R.drawable.musiccover9);
+        artist.add(R.drawable.musiccover5);
+        artist.add(R.drawable.musiccover7);
+        artist.add(R.drawable.musiccover10);
+
 
         // set up the RecyclerView
         recyclerView1 = (RecyclerView) findViewById(R.id.list1);
@@ -51,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         recyclerView2 = (RecyclerView) findViewById(R.id.list2);
         horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(horizontalLayoutManager);
-        adapter = new MyRecyclerViewAdapter(MainActivity.this, cover, titles, subtitles);
+        adapter = new MyRecyclerViewAdapter(MainActivity.this, artist, titles, subtitles);
         adapter.setClickListener(this);
         recyclerView2.setAdapter(adapter);
 

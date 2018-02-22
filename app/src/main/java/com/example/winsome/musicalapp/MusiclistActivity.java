@@ -9,6 +9,9 @@ import java.util.ArrayList;
 public class MusiclistActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.music_list);
 
         final ArrayList<Cover> covers = new ArrayList<Cover>();
