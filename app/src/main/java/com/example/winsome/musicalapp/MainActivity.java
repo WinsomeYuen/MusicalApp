@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         setContentView(R.layout.activity_main);
 
         // data to populate the RecyclerView with
-        cover.add(R.drawable.musiccover1);
-        cover.add(R.drawable.musiccover2);
-        cover.add(R.drawable.musiccover3);
-        cover.add(R.drawable.musiccover4);
+        cover.add(R.mipmap.musiccover1);
+        cover.add(R.mipmap.musiccover2);
+        cover.add(R.mipmap.musiccover3);
+        cover.add(R.mipmap.musiccover4);
 
         titles.add("Chaos");
         titles.add("Mic Drop");
@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         subtitles.add("Blackbear");
         subtitles.add("Troye Sivan");
 
-        artist.add(R.drawable.musiccover9);
-        artist.add(R.drawable.musiccover5);
-        artist.add(R.drawable.musiccover7);
-        artist.add(R.drawable.musiccover10);
+        artist.add(R.mipmap.musiccover9);
+        artist.add(R.mipmap.musiccover5);
+        artist.add(R.mipmap.musiccover7);
+        artist.add(R.mipmap.musiccover10);
 
 
         // set up the RecyclerView

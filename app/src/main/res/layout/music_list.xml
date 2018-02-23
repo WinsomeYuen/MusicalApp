@@ -21,7 +21,7 @@
         android:layout_marginTop="@dimen/gap"
         android:layout_marginBottom="@dimen/gap"
         android:scaleType="centerInside"
-        android:src="@drawable/musiccover1" />
+        android:src="@mipmap/musiccover1" />
 
     <TextView
         android:layout_width="match_parent"

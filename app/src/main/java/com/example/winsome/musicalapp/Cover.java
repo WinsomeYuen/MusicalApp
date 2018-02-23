@@ -5,11 +5,13 @@ public class Cover {
     private String subtitle;
     private int mResourceImageId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
+    private int mAudioResourceId;
 
-    public Cover(String mainT, String subT, int imageId) {
+    public Cover(String mainT, String subT, int imageId, int audioResourceId) {
         title = mainT;
         subtitle = subT;
         mResourceImageId = imageId;
+        mAudioResourceId = audioResourceId;
     }
 
     public String getmTitle() {
@@ -24,6 +26,10 @@ public class Cover {
 
     public boolean hasImage() {
         return mResourceImageId != NO_IMAGE_PROVIDED;
+    }
+
+    public int getmAudioResourceId() {
+        return mAudioResourceId;
     }
 
 }
