@@ -2,6 +2,6 @@
 <resources>
     <dimen name="gap">5dp</dimen>
     <dimen name="gapMargin">30dp</dimen>
-    <dimen name="sizeText1">20dp</dimen>
-    <dimen name="sizeText2">13dp</dimen>
+    <dimen name="sizeText1">20sp</dimen>
+    <dimen name="sizeText2">13sp</dimen>
 </resources>

@@ -9,23 +9,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.ArrayList;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
-    private List<Integer> mViewCovers = Collections.emptyList();
-    private List<String> mViewTitles = Collections.emptyList();
-    private List<String> mViewSubs = Collections.emptyList();
+    private ArrayList<Cover> mViewCover = new ArrayList<Cover>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    public MyRecyclerViewAdapter(Context context, List<Integer> covers, List<String> titles, List<String> subtitles) {
+    public MyRecyclerViewAdapter(Context context, ArrayList<Cover> covers) {
         this.mInflater = LayoutInflater.from(context);
-        this.mViewCovers = covers;
-        this.mViewTitles = titles;
-        this.mViewSubs = subtitles;
+        mViewCover = covers;
     }
 
     // inflates the row layout from xml when needed
@@ -39,18 +34,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     // binds the data to the view and textview in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        int image = mViewCovers.get(position);
-        String title = mViewTitles.get(position);
-        String subtitle = mViewSubs.get(position);
-        holder.myCover.setImageResource(image);
-        holder.myTitle.setText(title);
-        holder.mySubtitle.setText(subtitle);
+        Cover currentCover = getItem(position);
+        holder.myCover.setImageResource(currentCover.getmResourceImageId());
+        holder.myTitle.setText(currentCover.getmTitle());
+        holder.mySubtitle.setText(currentCover.getmSubtitle());
     }
 
     // total number of rows
     @Override
     public int getItemCount() {
-        return mViewTitles.size();
+        return mViewCover.size();
     }
 
     // stores and recycles views as they are scrolled off screen
@@ -76,8 +69,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     }
 
     // convenience method for getting data at click position
-    public String getItem(int id) {
-        return mViewTitles.get(id);
+    public Cover getItem(int id) {
+        return mViewCover.get(id);
     }
 
     // allows clicks events to be caught

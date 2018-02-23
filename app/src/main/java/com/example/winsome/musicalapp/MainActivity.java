@@ -14,10 +14,8 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
     private RecyclerView recyclerView1, recyclerView2;
     private MyRecyclerViewAdapter adapter;
     private LinearLayoutManager horizontalLayoutManager;
-    private ArrayList<Integer> cover = new ArrayList<>();
-    private ArrayList<Integer> artist = new ArrayList<>();
-    private ArrayList<String> titles = new ArrayList<>();
-    private ArrayList<String> subtitles = new ArrayList<>();
+    private ArrayList<Cover> cover = new ArrayList<>();
+    private ArrayList<Cover> artist = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,39 +26,30 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         setContentView(R.layout.activity_main);
 
         // data to populate the RecyclerView with
-        cover.add(R.mipmap.musiccover1);
-        cover.add(R.mipmap.musiccover2);
-        cover.add(R.mipmap.musiccover3);
-        cover.add(R.mipmap.musiccover4);
 
-        titles.add("Chaos");
-        titles.add("Mic Drop");
-        titles.add("IDFC");
-        titles.add("Happy Little Pill");
+        cover.add(new Cover("Chaos","Rich Brian",R.mipmap.musiccover1, R.raw.bensounddubstep));
+        cover.add(new Cover("Mic Drop","BTS", R.mipmap.musiccover2, R.raw.bensounddubstep));
+        cover.add(new Cover("IDFC","Blackbear", R.mipmap.musiccover3, R.raw.bensounddubstep));
+        cover.add(new Cover("Happy Little Pill","Troye Sivan", R.mipmap.musiccover4, R.raw.bensounddubstep));
 
-        subtitles.add("Rich Brian");
-        subtitles.add("BTS");
-        subtitles.add("Blackbear");
-        subtitles.add("Troye Sivan");
 
-        artist.add(R.mipmap.musiccover9);
-        artist.add(R.mipmap.musiccover5);
-        artist.add(R.mipmap.musiccover7);
-        artist.add(R.mipmap.musiccover10);
-
+        artist.add(new Cover("Rich Brian", "Chaos",R.mipmap.musiccover1, R.raw.bensounddubstep));
+        artist.add(new Cover("BTS", "Mic Drop",R.mipmap.musiccover2, R.raw.bensounddubstep));
+        artist.add(new Cover("Blackbear", "IDFC",R.mipmap.musiccover3, R.raw.bensounddubstep));
+        artist.add(new Cover("Troye Sivan", "Happy Little Pill",R.mipmap.musiccover4, R.raw.bensounddubstep));
 
         // set up the RecyclerView
         recyclerView1 = (RecyclerView) findViewById(R.id.list1);
         horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView1.setLayoutManager(horizontalLayoutManager);
-        adapter = new MyRecyclerViewAdapter(MainActivity.this, cover, titles, subtitles);
+        adapter = new MyRecyclerViewAdapter(MainActivity.this, cover);
         adapter.setClickListener(this);
         recyclerView1.setAdapter(adapter);
 
         recyclerView2 = (RecyclerView) findViewById(R.id.list2);
         horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(horizontalLayoutManager);
-        adapter = new MyRecyclerViewAdapter(MainActivity.this, artist, subtitles, titles);
+        adapter = new MyRecyclerViewAdapter(MainActivity.this, artist);
         adapter.setClickListener(this);
         recyclerView2.setAdapter(adapter);
 

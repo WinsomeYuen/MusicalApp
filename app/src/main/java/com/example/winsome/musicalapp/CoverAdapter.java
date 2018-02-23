@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class CoverAdapter extends ArrayAdapter<Cover> {
-    private static final String LOG_TAG = CoverAdapter.class.getSimpleName();
 
     public CoverAdapter(Activity context, ArrayList<Cover> cover) {
         super(context, 0, cover);
