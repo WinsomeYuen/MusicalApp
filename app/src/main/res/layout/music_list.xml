@@ -13,14 +13,14 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginBottom="@dimen/gap"
+        android:layout_marginTop="@dimen/gap"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
-        android:maxHeight="150dp"
-        android:maxWidth="150dp"
-        android:layout_marginTop="@dimen/gap"
-        android:layout_marginBottom="@dimen/gap"
-        android:scaleType="centerInside"
+        android:minHeight="150dp"
+        android:minWidth="150dp"
+        android:scaleType="fitCenter"
         android:src="@mipmap/musiccover1" />
 
     <TextView

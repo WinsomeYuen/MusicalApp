@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         recyclerView2 = (RecyclerView) findViewById(R.id.list2);
         horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(horizontalLayoutManager);
-        adapter = new MyRecyclerViewAdapter(MainActivity.this, artist, titles, subtitles);
+        adapter = new MyRecyclerViewAdapter(MainActivity.this, artist, subtitles, titles);
         adapter.setClickListener(this);
         recyclerView2.setAdapter(adapter);
 
