@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <ImageView
-        android:id="@+id/musicCover"
+        android:id="@+id/music_cover_image_view"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
@@ -13,13 +13,13 @@
         android:layout_marginRight="@dimen/gap"
         android:scaleType="fitCenter"/>
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/gap"
         android:textSize="15sp"/>
     <TextView
-        android:id="@+id/subtitle"
+        android:id="@+id/subtitle_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/gap"

@@ -9,7 +9,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:drawSelectorOnTop="true"
-    tools:context="com.example.winsome.musicalapp.MusiclistActivity">
+    tools:context="com.example.winsome.musicalapp.MusicListActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         android:textSize="@dimen/sizeText2" />
 
     <ListView
-        android:id="@+id/list"
+        android:id="@+id/song_list_view"
         android:layout_marginTop="@dimen/gap"
         android:orientation="vertical"
         android:layout_width="match_parent"

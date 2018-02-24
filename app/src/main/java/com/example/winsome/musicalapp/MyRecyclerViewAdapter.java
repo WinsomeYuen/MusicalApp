@@ -54,16 +54,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
         public ViewHolder(View itemView) {
             super(itemView);
-            myCover = itemView.findViewById(R.id.musicCover);
-            myTitle = itemView.findViewById(R.id.title);
-            mySubtitle = itemView.findViewById(R.id.subtitle);
+            myCover = itemView.findViewById(R.id.music_cover_image_view);
+            myTitle = itemView.findViewById(R.id.title_text_view);
+            mySubtitle = itemView.findViewById(R.id.subtitle_text_view);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
             Context context = view.getContext();
-            Intent intent = new Intent(context, MusiclistActivity.class);
+            Intent intent = new Intent(context, MusicListActivity.class);
             context.startActivity(intent);
         }
     }

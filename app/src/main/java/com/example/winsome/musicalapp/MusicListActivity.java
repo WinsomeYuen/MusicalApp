@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MusiclistActivity extends AppCompatActivity{
+public class MusicListActivity extends AppCompatActivity{
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
 
@@ -53,7 +53,7 @@ public class MusiclistActivity extends AppCompatActivity{
         covers.add(new Cover("Unforgettable", "French Montana",R.mipmap.musiccover10, R.raw.bensounddubstep));
         covers.add(new Cover("Every time we touch", "Cascada",R.mipmap.musiccover2,R.raw.bensoundhappyrock));
         CoverAdapter adapter = new CoverAdapter(this, covers);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.song_list_view);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class MusiclistActivity extends AppCompatActivity{
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    mMediaPlayer = MediaPlayer.create(MusiclistActivity.this, cover.getmAudioResourceId());
+                    mMediaPlayer = MediaPlayer.create(MusicListActivity.this, cover.getmAudioResourceId());
                     mMediaPlayer.start();
                     mMediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
